@@ -1,0 +1,14 @@
+              <input type="hidden" id="vegetable_limit" value="">
+
+              <!-- limiting checkboxes starts -->
+              <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+              <script>
+                var limit = $('#vegetable_limit').val();
+                $('input[type=checkbox]#vegetable-checkbox').on('change', function(e) {
+                  if ($('input[type=checkbox]#vegetable-checkbox:checked').length > limit) {
+                    $(this).prop('checked', false);
+                    alert("Select only you are allowed to");
+                  }
+                });
+              </script>
+              <!-- limiting checkboxes ends -->
